@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find dkbot_lidar_gmapping)/launch/lidar_laser.launch" />
+
+  <arg name="map_file" default="$(find dkbot_lidar_gmapping)/maps/dkbot_map.yaml"/>
+  <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" />
+
+  <include file="$(find dkbot_navigation)/include/amcl.launch.xml" />
+  <include file="$(find dkbot_navigation)/include/move_base.launch.xml" />
+</launch>
