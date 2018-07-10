@@ -1,0 +1,3 @@
+KERNEL=="ttyACM?", SUBSYSTEM=="tty",  MODE="0666" SYMLINK+="dkbotarduino"
+KERNEL=="ttyUSB?", SUBSYSTEM=="tty",  MODE="0666" SYMLINK+="dkbotlidar"
+
