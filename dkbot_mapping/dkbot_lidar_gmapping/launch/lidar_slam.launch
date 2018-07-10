@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find dkbot_lidar_gmapping)/launch/lidar_laser.launch" />
+  <include file="$(find dkbot_lidar_gmapping)/param/slam_gmapping.xml" />
+</launch>
